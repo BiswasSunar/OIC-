@@ -1,0 +1,401 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* topbar styling start */
+.top_bar{
+    background-color: black;
+    color: white;
+    padding: 9px 0px;
+}
+.container{
+    width: 85%;
+    margin: auto;
+}
+.top_bar .container{
+    display: flex;
+    justify-content: space-between;
+}
+.top_bar ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+.top_bar i{
+    font-size: 10px;
+}
+@media screen and (max-width:404px){
+    .top_bar{
+        display: none;
+    }
+}
+/* topbar styling end */
+/* header section starts */
+.header-section {
+    padding: 10px 0;
+    background-color: beige;    
+}
+.header-section .logo h3{
+    font-variant: small-caps;   
+    font-style: italic;
+    font-size: 35px;
+}
+.header-section .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-section ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header-section ul li{
+    padding: 5px 2px;
+    text-transform: uppercase;
+}
+.header-section ul li:hover{
+    background-color: rgb(154, 154, 232);
+    color: white;
+    cursor: pointer;
+}
+link{
+    position: relative;
+}
+.nav-blog{
+    position: relative;
+}
+.header-section .dropdown{
+    background-color: purple;
+    color: white;
+    display: none;
+    padding: 10px;
+    margin-left: -20px;
+    position: absolute;
+    width: 135px;
+    top: 29px;
+    z-index: 1000;
+}
+.header-section .dropdown2{
+    background-color: purple;
+    color: white;
+    display: none;
+    padding: 10px;
+    margin-left: -20px;
+    position: absolute;
+    width: 110px;
+    top: 29px;
+    z-index: 1000;
+}
+.header-section .dropdown li{
+    font-size: 13px;
+}
+.header-section .dropdown2 li{
+    font-size: 13px;
+}
+.nav-link:hover .dropdown{
+    display: block;
+}
+.nav-blog:hover .dropdown2{
+    display: block;
+}
+.menu-bar {
+    display: none;
+}
+.menu-bar i{
+    font-size: 25px;
+    cursor: pointer;
+}
+@media screen and (max-width: 1143px) {
+    .container{
+        width: 95%;
+    }
+}
+@media screen and  (max-width:979px) {
+    .nav-elements ul{
+        display: none;
+    }
+    .menu-bar{
+        display: block;
+    }
+}
+@media screen and (max-width : 404px) {
+    .header-section{
+        background-color: beige;
+        color:  black;
+    }
+}
+/* header section ends */
+/* hero section styling starts */
+.hero-section {
+    background-color: rgb(244, 244, 255);
+    color: white;
+    position: relative;
+}
+.hero-section .overlay{
+    height: 540px;
+    width: 100%;
+    background: url("./Images/student.jpg") no-repeat;
+    background-size :cover; 
+    opacity: 0.9;
+}
+.hero-section-content{
+    position: absolute;
+    top: 100px;
+    left: 50px;
+}
+.hero-section-content p{
+    font-size: 18px;
+    font-style: italic;
+    padding: 20px 0;
+}
+.hero-section-content button{
+    border: none;
+    background-color: rgb(0, 26, 66);
+    color : white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+@media screen and (max-width:558px) {
+    .hero-section .overlay{
+        height: 500px;
+    }
+    .hero-section-content{
+        top: 15%;
+        left: 5%;
+    }
+    .hero-section-content h1{
+        font-size: 30px;
+    }
+    .hero-section-content p{
+        font-size: 15px;
+    }
+    
+}
+/* heros section styling ends */
+/* highlight section starts */
+.course-card{
+    width: 300px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+.course-card h4{
+    background-color: rgb(4, 1, 64);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+.course-card p{
+    padding: 15px;  
+}
+.course {
+    position: relative;
+    top: -59px;
+}
+.course .container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* if wrap used then media query not required */
+    row-gap: 20px;
+}
+.course-card button{
+    border: none;
+    margin: 5px 15px 15px 15px;
+    padding: 5px 10px;
+    background-color: rgb(0, 26, 66);
+    color: white;
+    cursor: pointer;
+}
+/* coursecard styling ends */
+.popular-course .container{
+    display: flex;  /* row ma laijanxa */
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    row-gap: 80px;
+}
+
+/* highlight section ends */
+/* popular course styling starts */
+.popular-course{
+    padding:0px;
+    margin-top: -30px;
+}
+.head{
+    text-align: center;
+    padding: 30px;
+}
+.head h2{
+    font-size: 40px;
+    color: brown;
+}
+.head h2 ::before{
+    content: "";
+    width: 50px;
+    height: 4px;
+    background-color: purple;
+    display: block;
+    margin: 20px auto;
+}
+.popular-course .course-card img{
+    width: 100%;
+    height: 70%;
+}
+.popular-course .course-card h5{
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+}
+.popular-course .course-card p{
+    font-style: italic;
+    margin-top: -20px;
+}
+.author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(193, 193, 193);
+    padding-left: 20px;
+}
+.author .author-img{
+    margin-top: 5px;
+}
+.author .author-img img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.author-name .name{
+    font-size: 15px;
+    font-weight: 550;
+    padding-top: 30px;
+}
+.author-name .name span{
+    color: rgb(83, 83, 83) ;
+}
+.price {
+    background-color: orange;
+    color:rgb(255, 255, 255);
+    padding-top: 15px;
+    height: 35px;
+}
+.price p{
+    font-size: 20px;
+    font-weight: 550;;
+    /* margin-top: ;  */
+}
+/* popular course styling ends */
+/* mid section styling starts */
+.mid-section{
+    background-color: rgb(0, 26, 255);
+    color: white;
+    padding: 100px;
+    margin: 70px 30px;
+    margin-top: 70px;
+
+}
+.mid-section .container{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: space-between;
+}
+.mid-section .button button{
+    border: none;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-size: 18px;
+    cursor: pointer;
+    border: 1px solid white;
+}
+.mid-section .button button:hover{
+    background-color: transparent;
+    color: white;
+}
+/* mid section styling ends */
+/* testimonial section styling starts */
+.testimonial-section{
+    text-align: center;
+    background: url(./Images/manlaptop.jpg.crdownload) no-repeat;
+    background-size: cover;
+    padding: 20px 0 30px 0;
+    color: white;
+}
+.testimonial-section h2{
+    color: white;
+}
+.testimonial-section h2::before {
+    background-color: white;
+}
+.testimonial-card .testi-img img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.testimonial-card p{
+    font-size: 17px;
+    padding: 20px;
+    font-style: italic;
+}
+.testimonial-card p i{
+    font-size: 35px;
+}
+.name-and-position h4{
+    font-size: 27px;
+    padding-top: 15px;
+}
+/* testimonial section ends */
+/* footer section styling starts   */
+.footer-section{
+    background-color: rgb(12, 1, 31);
+    color: white;
+}
+.footer-section .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+.footer-link h4{
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+.footer-section ul{
+    list-style: none;
+}
+.footer-section ul li{
+    padding: 3px 0;
+}
+.footer-section .contact ul{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    margin-top: 15px;
+}
+.footer-section .contact li{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    padding: 0;
+    background-color: azure;
+    color: black;
+}.footer-section .contact li i{
+    margin-top: 10px;
+    font-size: 14px;
+}
+.footer-section p{
+    text-align: center;
+    width: 85%;
+    margin: auto;
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+/* footer section styling ends */
